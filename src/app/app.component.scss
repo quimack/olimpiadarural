@@ -5,58 +5,135 @@
     rgba(159, 199, 177, 1) 50%,
     rgba(255, 255, 255, 0) 100%
   );
-  //   max-height: 100vh;
-  //   height: 100vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .background {
-  background-image: url("../assets/img/olimpiadarural.jpg");
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
+  width: 75%;
+  // height: 100vh;
+  // background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  // &.background1 {
+  //   background-image: url("../assets/img/Page-1.jpg");
+  // }
+  // &.background2 {
+  //   background-image: url("../assets/img/Page-2.jpg");
+  // }
 }
 
 .links {
-  width: 100%;
-  padding-block: 2em 3em;
+  width: 75%;
+  padding-block: 1.5em;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: "Rosarivo", cursive;
   font-weight: 600;
-  font-size: 1.4em;
+  font-size: 1.3em;
+
+  .contact-links {
+    display: flex;
+    a {
+      border: none;
+      box-shadow: none;
+      padding-left: 1em;
+    }
+  }
   a {
+    // margin: .2em;
     display: flex;
     align-items: center;
-    padding: 0.4em;
+    justify-content: center;
     text-decoration: inherit;
-    color: #2f250a;
+    // color: #2f250a;
+    color: #34210b;
     border-radius: 18px;
-    box-shadow: 8px 8px 11px -7px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 8px 8px 11px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 8px 8px 11px -7px rgba(0,0,0,0.75);
-    border: 1px solid #2f250a;
-
-    &.contact{
+    box-shadow: 8px 8px 11px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 8px 11px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 8px 11px -7px rgba(0, 0, 0, 0.75);
+    border: 1px solid #34210b;
+    &.contact {
       width: 2em;
       height: 2em;
       display: flex;
       justify-content: center;
-      &:hover{
-        background-color: rgba(195, 223, 208, 0.747);
+      &:hover {
+        // background-color: rgba(195, 223, 208, 0.747);
       }
     }
-    &.btn{
-      background-color: rgba(195, 223, 208, 0.747);
-    }
-    &:hover {
+    &.btn {
+      // background-color: #3885B5;
       background-color: transparent;
+      padding: 0.5em 0.8em;
+
+      // background-color: rgba(195, 223, 208, 0.747);
+      &:hover {
+        background-color: #34210b;
+        color: #9fc7b1;
+      }
+    }
+
+    img {
+      width: 43px;
+      height: 43px;
+
+      &.email {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
   // a:hover {
   //   background-color: rgba(195, 223, 208, 0.747);
   // }
+}
+
+@media screen and (max-width: 720px) {
+  .background {
+    width: 100%;
+  }
+  .links {
+    width: 95%;
+    margin-inline: 20px;
+    a {
+      img {
+        width: 38px;
+        height: 38px;
+
+        &.email {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .links{
+    .contact-links > a{
+      padding-left: .3em;
+    }
+    a {
+      &.btn {
+        font-size: 0.8em;
+      }
+
+      img {
+        width: 34px;
+        height: 34px;
+
+        &.email {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
 }
